@@ -30,8 +30,16 @@ head(penguins)
 
 ```{r}
 # Make your agreed-upon plot here, e.g.:
-penguins |> ggplot(aes(x = species, y = bill_deph_mm, fill = species)) + 
+penguins |> ggplot(aes(x = bill_length_mm, y = bill_depth_mm, color = factor(bill_depth_mm))) + 
   geom_point(
+    size = 3,
+    alpha = 0.8
     
+  ) +
+  labs(
+    title = "Bill length vs bill depth of species ",
+    x = "Bill Length in mm",
+    y = "Bill depth in mm",
+    color = "Bill depth color"
   )
 ```
