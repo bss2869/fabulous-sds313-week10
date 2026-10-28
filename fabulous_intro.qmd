@@ -10,6 +10,8 @@ format: html
      merge conflict. Resolve it together rather than one person overwriting the other. -->
 - Mark Ordonez
 
+-Yash Challa
+
 ## Team Visualizations
 
 <!-- Each teammate: agree as a team on who's making which plot before anyone starts, so
