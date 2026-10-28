@@ -30,8 +30,25 @@ format: html
 #| message: false
 library(tidyverse)
 library(palmerpenguins)
+head(penguins)
 ```
 
+### [Yash] — [Scatterplot, e.g. "Body Mass by Species"]
+
+```{r}
+# Make your agreed-upon plot here, e.g.:
+penguins |> ggplot(aes(x = bill_length_mm, y = bill_depth_mm, color = factor(bill_depth_mm))) + 
+  geom_point(
+    size = 3,
+    alpha = 0.8
+    
+  ) +
+  labs(
+    title = "Bill length vs bill depth of species ",
+    x = "Bill Length in mm",
+    y = "Bill depth in mm",
+    color = "Bill depth color"
+  )
 ### Mark Ordonez — \[Bar Graph of Flipper Length vs Species and Sex]
 
 ```{r}
