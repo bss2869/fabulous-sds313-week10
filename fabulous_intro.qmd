@@ -5,18 +5,25 @@ format: html
 
 ## Team Members
 
+```{=html}
 <!-- Everyone: add your name below, one per line. You will likely collide with a teammate
      editing this same list at the same time — that's expected, and it's your first real
      merge conflict. Resolve it together rather than one person overwriting the other. -->
+```
+
 - Mark Ordonez
 
 -Yash Challa
 
+- Ben Smull
+
 ## Team Visualizations
 
+```{=html}
 <!-- Each teammate: agree as a team on who's making which plot before anyone starts, so
      no two people create the same visualization. Then add your own section below with
      your name and your one plot. -->
+```
 
 ```{r}
 #| label: setup
@@ -42,4 +49,25 @@ penguins |> ggplot(aes(x = bill_length_mm, y = bill_depth_mm, color = factor(bil
     y = "Bill depth in mm",
     color = "Bill depth color"
   )
+### Mark Ordonez — \[Bar Graph of Flipper Length vs Species and Sex]
+
+```{r}
+# Make your agreed-upon plot here, e.g.:
+penguins |>
+  filter(!is.na(sex)) |>
+  group_by(species, sex) |>
+  summarise(
+    avg_flipper = mean(flipper_length_mm, na.rm = TRUE)
+  ) |>
+  ggplot(aes(x = species, y = avg_flipper, fill = sex)) +
+  geom_col(position = "dodge") +
+  labs(
+    title = "Average Flipper Length by Species and Sex",
+    x = "Species",
+    y = "Average Flipper Length in mm"
+  )
+# penguins |> ggplot(aes(x = species, y = body_mass_g, fill = species)) + geom_boxplot()
+penguins |> ggplot(aes(x = body_mass_g, fill = species)) + geom_histogram()
 ```
+
+\|
