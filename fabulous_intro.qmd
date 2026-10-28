@@ -1,5 +1,5 @@
 ---
-title: "Team [TEAM NAME] — Intro"
+title: "Team Fabulous — Intro"
 format: html
 ---
 
@@ -8,8 +8,11 @@ format: html
 <!-- Everyone: add your name below, one per line. You will likely collide with a teammate
      editing this same list at the same time — that's expected, and it's your first real
      merge conflict. Resolve it together rather than one person overwriting the other. -->
+- Mark Ordonez
 
--
+-Yash Challa
+
+- Ben Smull
 
 ## Team Visualizations
 
@@ -29,4 +32,5 @@ library(palmerpenguins)
 ```{r}
 # Make your agreed-upon plot here, e.g.:
 # penguins |> ggplot(aes(x = species, y = body_mass_g, fill = species)) + geom_boxplot()
+penguins |> ggplot(aes(x = body_mass_g, fill = species)) + geom_histogram()
 ```
