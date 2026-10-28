@@ -12,6 +12,8 @@ format: html
 
 -Yash Challa
 
+- Ben Smull
+
 ## Team Visualizations
 
 <!-- Each teammate: agree as a team on who's making which plot before anyone starts, so
@@ -30,4 +32,5 @@ library(palmerpenguins)
 ```{r}
 # Make your agreed-upon plot here, e.g.:
 # penguins |> ggplot(aes(x = species, y = body_mass_g, fill = species)) + geom_boxplot()
+penguins |> ggplot(aes(x = body_mass_g, fill = species)) + geom_histogram()
 ```
